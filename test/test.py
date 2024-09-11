@@ -4,7 +4,7 @@ from ModuleLoader import *
 
 @py2v
 def ModuleBasic(p1, p2):
-    #/ module BASIC #(vparamB1, vparamB2, vparamBN)(
+    #/ module BASIC #(vparamB1, vparamB2, vparamBN)( // vparams are declared with verilog lines
     if p1 > 0:
        #/ portBA1,
        pass
@@ -32,6 +32,17 @@ def ModuleMUL(param1, param2, paramN):  # Params (called by the python script) a
        pass
     #/ );
 
+    #/ localparam IDLE     = 2'b00;
+    #/ localparam ASSIGN   = 2'b01;
+    #/  localparam COMP     = 2'b10;
+    #/  always @(posedge clk, negedge arst_n) begin
+    #/      if (~arst_n) begin
+    #/          CS <= IDLE;
+    #/      end
+    #/      else if (en) begin
+    #/          CS <= NS;
+    #/      end
+    #/  end
 
 
     #/ INST:
@@ -85,9 +96,7 @@ def ModuleTOP(param_top1,param_top2):
         #/ INST_NAME: MUL1
         #/ ENDINST
 
-    #/ start of module TOP
-    #/ middle of module TOP
-    #/ end of module TOP
+\
     #/ endmodule
 
 ModuleTOP(param_top1 = 2,param_top2 = 4)
