@@ -12,10 +12,10 @@ def ModuleBasic(p1, p2):
        #/ portBA2,
        pass
     #/ );
-    #/ start of module BASIC
-    #/ middle of module BASIC
-    #/ end of module BASIC
+
     #/ endmodule
+    continue 
+    
 
 
 @py2v

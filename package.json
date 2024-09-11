@@ -3,13 +3,17 @@
     "displayName": "Voldelog",
     "description": "Stay Evil",
     "version": "0.0.1",
+    "publisher": "Niurx",
     "engines": {
         "vscode": "^1.93.0"
     },
     "categories": [
         "Other"
     ],
-    "activationEvents": [],
+"activationEvents": [
+    "onLanguage:python",
+    "onCommand:extension.commentEmptyLine"
+],
     "main": "./extension.js",
     "contributes": {
         "grammars": [
@@ -19,6 +23,20 @@
                 "injectTo": [
                     "source.python"
                 ]
+            }
+        ],
+        "commands": [
+            {
+                "command": "extension.commentEmptyLine",
+                "title": "Comment Empty Line"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "extension.commentEmptyLine",
+                "key": "ctrl+/",
+                "mac": "cmd+/",
+                "when": "editorTextFocus && editorLangId == python"
             }
         ]
     },
