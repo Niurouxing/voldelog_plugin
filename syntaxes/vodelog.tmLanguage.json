@@ -1,0 +1,11 @@
+{
+    "scopeName": "source.python.vodelog",
+    "injectionSelector": "L:source.python",
+    "patterns": [
+        {
+            "name": "comment.line.vodelog",
+            "begin": "\\s*#/",
+            "end": "$"
+        }
+    ]
+}

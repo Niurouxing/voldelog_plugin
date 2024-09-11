@@ -1,0 +1,10 @@
+{
+    "tokenColors": [
+        {
+            "scope": "comment.line.vodelog",
+            "settings": {
+                "foreground": "#FF0000"
+            }
+        }
+    ]
+}
